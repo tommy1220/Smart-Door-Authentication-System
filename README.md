@@ -24,11 +24,13 @@ This project utilizes two key AWS features: **AWS Kinesis Video Streams Services
 
 <br/><br/>
 
-### Use Cases walk through/Examples with detials
+### Use Cases walk through/Examples with details
 
 When a visitor appears in front of the camera **alive** (the following snapshot represents how my face is presented in the webcame via **GStreamer** to **AWS Kinesis Video Stream**), the authentication system will capture and generates an event that triggers my **AWS Lambda function**.  
 
-![image-20200728234850484](images/Smart-Door-Authentication-README/image-20200728234850484.png)
+![image-20200519013337766](../Smart-Door-Authentication-System/images/Smart-Door-Authentication-README/image-20200519013337766.png)
+
+
 
 <br/><br/>
 
