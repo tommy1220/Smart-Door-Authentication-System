@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Smart Door Authentication</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel='stylesheet' href='https://codepen.io/P1N2O/pen/xxbjYqx.css'>
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="apiGateway-js-sdk/apigClient.js"></script>
+	<script type="text/javascript" src="apiGateway-js-sdk/lib/axios/dist/axios.standalone.js"></script>
+	<script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+	<script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js"></script>
+	<script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/components/hmac.js"></script>
+	<script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js"></script>
+	<script type="text/javascript" src="apiGateway-js-sdk/lib/url-template/url-template.js"></script>
+	<script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+	<script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+	<script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+	<script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/utils.js"></script>
+
+	<script src="WP1owner.js"></script>
+
+</head>
+<body>
+    
+<!-- partial:index.partial.html -->
+<h1 class="text-light title-gy">Smart Door</h1>
+
+<div class="btn-group mt-2 mb-4" role="group" aria-label="actionButtons">
+	<div target="_blank" class="d-block btn-gy"><i class="fas fa-user-alt mr-2"></i>Name</div>
+	<input type="text" id="name" placeholder="Visitor's name">
+</div>
+
+<!-- <div class="btn-group mt-2 mb-4" role="group" aria-label="actionButtons">
+	<div target="_blank" class="d-block btn-gy"><i class="fas fa-address-card mr-2"></i>faceId</div>
+	<input type="text" id="faceId">
+</div> -->
+
+<div class="btn-group mt-2 mb-4" role="group" aria-label="actionButtons">
+	<div target="_blank" class="d-block btn-gy"><i class="fas fa-phone-alt mr-2"></i>Phone</div>
+	<input type="text" id="phoneNumber" placeholder="US phone number">
+</div>
+
+<div class="checkbox mb-3 checkbox-gy">
+    <label>
+      <input type="checkbox" id="denyAccess"> Deny Access
+    </label>
+</div>
+
+<button class="btn btn-outline-light" onclick="submitForm()">Submit</button>
+
+
+
+
+</body>
+</html>
